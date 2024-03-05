@@ -35,5 +35,42 @@ public class Bird {
         this.primaryColors = primaryColors;
     }
 
+    public void setID(int newID){
+        id = newID;
+    }
+
+    public int getID(){
+        return id;
+    }
+
+    public void setWeight(double newWeight){
+        weight = newWeight;
+    }
+
+    public void setWingspan(double newWingspan){
+        wingSpan = newWingspan;
+    }
+
+    public void setLength(double newLength){
+        length = newLength;
+    }
+
+    public double getLength(){
+        return length;
+    }
+    @Override
+    public String toString(){
+        String colorString = "";
+        for(String color:primaryColors){
+            colorString += color + ", ";
+        }
+        colorString = colorString.substring(0,colorString.length()-2);
+        return name + ", also known as " + scientificName + ", and has primary colors of " + colorString;
+    }
+
+    public void printDimensions(){
+        System.out.println("For a " + name + " the length is " + length + "cm the wingspan is " + wingSpan + "cm and the weight is " + weight + "g");
+    }
+
 
 }
